@@ -56,12 +56,12 @@ void Organizacion::listar()
 {
         MyConnection myconnection;
     myconnection.connect();
-    sql::ResultSet* personas = myconnection.query("SELECT organizacion.id, organizacion.nombreOrganizacion FROM computacion.organizacion;");
+    sql::ResultSet* personas = myconnection.query("SELECT organizacion.id, organizacion.nombreOrganizacion FROM computacion.organizacion ORDER BY organizacion.nombreOrganizacion;");
 
     while (personas->next()) {
         cout << "<td>" << personas->getString("nombreOrganizacion") << "</td>" << endl;
         cout << "<td>NADA</td>" << endl;
-        cout << "<td>NADA</td>" << endl;
+        cout << "<td>" << personas->getString("nombreOrganizacion") << "</td>" << endl;
         cout << "<td><a class='btn btn-danger' style='width: 100px' href='2Parcial?eliminar=" + personas->getString("id") + "'" << endl;
         cout << ">X</a></td>" << endl;
         cout << "</tr>" << endl;
