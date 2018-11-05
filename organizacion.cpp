@@ -54,7 +54,7 @@ void Organizacion::inicio(){
 
 void Organizacion::listar()
 {
-        MyConnection myconnection;
+    MyConnection myconnection;
     myconnection.connect();
     sql::ResultSet* personas = myconnection.query("SELECT organizacion.id, organizacion.nombreOrganizacion FROM computacion.organizacion ORDER BY organizacion.nombreOrganizacion;");
 
