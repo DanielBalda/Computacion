@@ -1,3 +1,5 @@
 1)  1. tail -f /var/log/apache2/error.log
 
 3)  2. git-clone
+
+en la base de datos Computacion cambie el nombre de la columna "nombre" de la tabla organizacion a "nombreOrganizacion"
